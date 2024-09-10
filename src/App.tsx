@@ -2,27 +2,24 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import MatchGame from './MatchGame';
 import TranslationGame from './TranslationGame';
+import './App.css'; // Add styles here
 
 const App: React.FC = () => {
   return (
     <Router>
-      <div>
-        <h1>Language Learning Games</h1>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/match-game">Word Matching Game</Link>
-            </li>
-            <li>
-              <Link to="/translation-game">Translation Game</Link>
-            </li>
-          </ul>
+      <div className="app-container">
+        <h1 className="main-title">Language Learning Games</h1>
+        <nav className="menu">
+          <Link to="/match-game" className="menu-item">Word Matching Game</Link>
+          <Link to="/translation-game" className="menu-item">Translation Game</Link>
         </nav>
 
-        <Routes>
-          <Route path="/match-game" element={<MatchGame />} />
-          <Route path="/translation-game" element={<TranslationGame />} />
-        </Routes>
+        <div className="content">
+          <Routes>
+            <Route path="/match-game" element={<MatchGame />} />
+            <Route path="/translation-game" element={<TranslationGame />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );

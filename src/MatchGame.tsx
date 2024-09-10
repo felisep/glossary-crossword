@@ -25,6 +25,7 @@ const shuffleCards = (): Card[] => {
     { word: word.norwegian, language: 'norwegian' as const, isMatched: false, isRed: false, isBlue: false }
   ])].sort(() => Math.random() - 0.5);
 };
+
 const MatchGame: React.FC = () => {
   const [cards, setCards] = useState(shuffleCards());
   const [selectedCards, setSelectedCards] = useState<number[]>([]);
@@ -79,13 +80,6 @@ const MatchGame: React.FC = () => {
     }
   };
 
-  // Restart the game
-  const handleRestart = () => {
-    setCards(shuffleCards()); // Shuffle and reset the cards
-    setSelectedCards([]); // Clear selected cards
-    setGameWon(false); // Reset the game won state
-  };
-
   return (
     <div className="match-game">
       <h2>Word Matching Game</h2>
@@ -104,7 +98,7 @@ const MatchGame: React.FC = () => {
       {gameWon && (
         <div>
           <div className="congrats-message">Gratulerer! Du matchet alle ordene!</div>
-          <button className="restart-button" onClick={handleRestart}>
+          <button className="restart-button" onClick={() => window.location.reload()}>
             Start på nytt?
           </button>
         </div>

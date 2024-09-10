@@ -27,19 +27,19 @@ const TranslationGame: React.FC = () => {
   return (
     <div className="translation-game">
       <h2>Translation Game</h2>
-      <ul>
+      <div className="translation-grid">
         {words.map((word, index) => (
-          <li key={index}>
-            <span>{word.norwegian}: </span>
+          <div key={index} className="translation-row">
+            <span className="norwegian-word">{word.norwegian}: </span>
             <input
               type="text"
               value={answers[index]}
               onChange={(e) => handleInputChange(index, e.target.value)}
-              className={isCorrect[index] ? 'correct' : ''}
+              className={`translation-input ${isCorrect[index] ? 'correct' : ''}`}
             />
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

@@ -1,0 +1,16 @@
+.translation-game {
+    text-align: center;
+}
+
+.translation-game ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.translation-game li {
+    margin: 10px 0;
+}
+
+input.correct {
+    background-color: #a3d977;
+}

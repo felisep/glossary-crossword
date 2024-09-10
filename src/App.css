@@ -1,0 +1,33 @@
+.crossword-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 40px);
+  gap: 5px;
+}
+
+.crossword-row {
+  display: contents;
+}
+
+.crossword-cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid #000;
+}
+
+.crossword-cell.black {
+  background-color: black;
+}
+
+input.crossword-cell {
+  border: 1px solid #000;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.active-cell {
+  border: 2px solid blue;
+}

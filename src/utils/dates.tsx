@@ -1,5 +1,3 @@
-// utils/getWeekNumber.ts
-
 export function getWeekNumber(date: Date): number {
     // Copy the date to avoid modifying the original
     const currentDate = new Date(date.getTime());

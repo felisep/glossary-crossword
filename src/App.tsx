@@ -4,8 +4,6 @@ import MatchGame from './MatchGame';
 import TranslationGame from './TranslationGame';
 import './App.css';
 import { getWeekNumber } from './utils/dates';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-
 
 const App: React.FC = () => {
   const [currentDate] = useState(new Date());
@@ -14,7 +12,6 @@ const App: React.FC = () => {
 
   return (
     <Router>
-       <SpeedInsights />
       <div className="app-container">
         <h1 className="main-title">Language Learning Games - Week {week}</h1>
         <nav className="menu">
@@ -31,7 +28,6 @@ const App: React.FC = () => {
         </div>
       </div>
     </Router>
-    
   );
 };
 

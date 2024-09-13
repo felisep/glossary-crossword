@@ -37,9 +37,13 @@
     font-size: 16px;
     border: 2px solid #ccc;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
+    /* Smooth background color change */
 }
 
 .translation-input.correct {
+    background-color: #a3d977;
+    /* Green background when correct */
     border-color: #4CAF50;
-    /* Green border if correct */
+    /* Green border when correct */
 }

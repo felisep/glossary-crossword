@@ -20,7 +20,8 @@ const TranslationGame: React.FC = () => {
     setAnswers(newAnswers);
 
     const newIsCorrect = [...isCorrect];
-    newIsCorrect[index] = value.toLowerCase() === words[index].english.toLowerCase();
+    // Trim the value before checking correctness to allow trailing spaces
+    newIsCorrect[index] = value.trim().toLowerCase() === words[index].english.toLowerCase();
     setIsCorrect(newIsCorrect);
   };
 

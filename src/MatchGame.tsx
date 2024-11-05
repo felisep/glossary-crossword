@@ -10,12 +10,11 @@ type Card = {
 };
 
 const words = [
-  { english: 'narrator', norwegian: 'forteller' },
-  { english: 'back', norwegian: 'rygg' },
-  { english: 'paws', norwegian: 'poter' },
-  { english: 'dare', norwegian: 'våger' },
-  { english: 'perhaps', norwegian: 'kanskje' },
-  { english: 'tiny', norwegian: 'bitte liten' }
+  { english: 'Have to', norwegian: 'Må' },
+  { english: 'Is complaining', norwegian: 'Klager' },
+  { english: 'Stomach pains', norwegian: 'Magesmerter' },
+  { english: 'Dissy', norwegian: 'Svimmel' },
+  { english: 'Flu', norwegian: 'Influensa' },
 ];
 
 // Function to shuffle the cards
